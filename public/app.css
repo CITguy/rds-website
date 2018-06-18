@@ -1,0 +1,17 @@
+.brand-logo {
+  align-items: center;
+  display: flex;
+  height: 3.5rem;
+  justify-content: center;
+  width: 15rem;
+}
+
+.brand-logo img {
+  height: 2rem;
+}
+
+.demo {
+  background-color: #fff;
+  border: 1px solid @gray-400;
+  padding: 1rem;
+}

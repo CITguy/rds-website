@@ -1,17 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>rds-website</title>
+    <link rel="icon" href="<%= BASE_URL %>favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/helix-ui/dist/styles/helix-ui.css">
+    <link rel="stylesheet" href="<%= BASE_URL %>app.css">
+    <title>Helix Design System</title>
   </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but rds-website doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
+  <body id="top" class="hxVertical">
+    <a href="#content">Skip to main content</a>
+
+    <header id="head">
+      <nav class="global-nav">
+        <a class="brand-logo" href="">
+          <img src="<%= BASE_URL %>helix-logo.svg" />
+        </a>
+      </nav>
+    </header>
+
+    <div id="app">
+      <!-- This will all be replaced when Vue mounts the app -->
+      <style>@import '<%= BASE_URL %>app-loading.css';</style>
+      <div id="stage" class="loading">
+        <nav id="nav" class="hxNav">
+          <p><hx-busy></hx-busy> Loading...</p>
+        </nav>
+        <main role="main" id="content">
+          <p><hx-busy></hx-busy> Loading...</p>
+        </main>
+      </div>
+    </div>
+
+    <footer id="foot">
+      &copy; 2018 Rackspace US, Inc.
+      <nav>
+        <a href="https://www.rackspace.com/information/legal/websiteterms">Website Terms</a>
+        <a href="https://www.rackspace.com/information/legal/privacystatement">Privacy Policy</a>
+      </nav>
+    </footer>
+
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="https://unpkg.com/helix-ui/dist/scripts/helix-ui.browser.js"></script>
+
     <!-- built files will be auto injected -->
   </body>
 </html>

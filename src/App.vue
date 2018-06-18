@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="stage">
+      <AppNav/>
+      <main role="main" id="content" class="hxBox-md">
+        <router-view></router-view>
+      </main>
+      <aside class="hxSiderail hxBox-md">
+        <router-view name="aside"></router-view>
+      </aside>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import AppNav from './components/AppNav';
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+  export default {
+    name: 'App',
+    components: {
+      AppNav,
+    },
+  };
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="less">
+@import './styles/app.less';
 </style>
